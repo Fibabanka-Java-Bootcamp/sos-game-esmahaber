@@ -48,11 +48,53 @@ public class SOSGame {
 
     }
 
+    public String[][] playerComputer(int row, int column, String [][]board )
+    {
+        if(totalBox > 0){
+            boolean check;
+            totalBox--;
+            System.out.println(totalBox);
+
+
+            int randomRow, randomColumn;
+            do {
+                System.out.println("do comp");
+                randomRow = (int)(1 + Math.random()*row);
+                randomColumn = (int)(1 + Math.random()*column);
+            }while(isEmpty(randomRow, randomColumn, board));
+
+            board[randomRow][randomColumn] = computerCharacter;
+
+            check = false;
+
+            if(check){
+                System.out.println("Computer check true");
+                computerPoint++;
+                boardPrint(row, column, board, computerPoint, userPoint);
+                return playerComputer(row, column, board);
+            }else{
+                boardPrint(row, column, board, computerPoint, userPoint);
+            }
+        }else{
+            //set game over
+        }
+
+        return board;
+    }
+
+    public boolean isEmpty(int row, int column, String [][]board )
+    {
+        if(board[row][column] != " ")
+            return true;
+
+        return false;
+    }
+
     public void startGame (){
         String [][]board = new String[boardRow+1][boardColumn+1];
         totalBox = (boardRow * boardColumn);
         setBoard(boardRow, boardColumn, board);
-        
+
         // 0 = computer , 1 = user
         int playerBegin = (int)Math.round((Math.random()));
 
@@ -72,7 +114,7 @@ public class SOSGame {
         boardPrint(boardRow, boardColumn, board, computerPoint, userPoint);
 
         if(playerBegin == 0){
-            //set computer player metod
+            playerComputer(boardRow, boardColumn, board);
         }else if(playerBegin == 1){
             //set user player metod
         }
