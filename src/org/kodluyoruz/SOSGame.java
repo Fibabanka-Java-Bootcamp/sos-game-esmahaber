@@ -57,7 +57,6 @@ public class SOSGame {
             totalBox--;
             System.out.println(totalBox);
 
-
             int randomRow, randomColumn;
             do {
                 randomRow = (int)(1 + Math.random()*row);
@@ -77,7 +76,7 @@ public class SOSGame {
                 return playerUser(row, column, board);
             }
         }else{
-            //set game over
+            gameOver();
         }
 
         return board;
@@ -113,7 +112,7 @@ public class SOSGame {
                 return playerComputer(row, column, board);
             }
         }else{
-            // set game over
+            gameOver();
         }
 
 
@@ -180,6 +179,23 @@ public class SOSGame {
         return false;
     }
 
+    public void gameOver()
+    {
+        for (int i=0 ; i<3 ; i++){
+            System.out.println("");
+        }
+
+        System.out.println("Game Over!!");
+
+        if (computerPoint > userPoint) {
+            System.out.println("Computer Win!");
+        }else if (computerPoint < userPoint){
+            System.out.println(userName + " Win!");
+        }else if (computerPoint == userPoint ){
+            System.out.println("Drawn Game!");
+        }
+    }
+
     public void startGame (){
         String [][]board = new String[boardRow+1][boardColumn+1];
         totalBox = (boardRow * boardColumn);
@@ -206,7 +222,7 @@ public class SOSGame {
         if(playerBegin == 0){
             playerComputer(boardRow, boardColumn, board);
         }else if(playerBegin == 1){
-            //set user player metod
+            playerUser(boardRow, boardColumn, board);
         }
 
 
