@@ -1,5 +1,7 @@
 package org.kodluyoruz;
 
+import java.util.Scanner;
+
 public class SOSGame {
     int computerPoint = 0;
     int userPoint = 0;
@@ -72,10 +74,48 @@ public class SOSGame {
                 return playerComputer(row, column, board);
             }else{
                 boardPrint(row, column, board, computerPoint, userPoint);
+                return playerUser(row, column, board);
             }
         }else{
             //set game over
         }
+
+        return board;
+    }
+
+    public String[][] playerUser(int row, int column, String [][]board )
+    {
+        if(totalBox > 0){
+            Scanner scanner = new Scanner(System.in);
+            boolean check;
+            int count = 0;
+            totalBox--;
+            System.out.println(userName + ", it's your turn to play");
+
+            do {
+                count++;
+                if(count > 1)  System.out.println("Please select an empty box:" );
+                System.out.println("Enter row and column number: (etc 4 4)" );
+                selectRow = scanner.nextInt();
+                selectColumn = scanner.nextInt();
+            }while(isEmpty(selectRow, selectColumn, board));
+
+            board[selectRow][selectColumn] = userCharacter;
+
+            check = checkSOS(selectRow, selectColumn, row, column, board, userCharacter);
+
+            if(check){
+                userPoint++;
+                boardPrint(row, column, board, computerPoint, userPoint);
+                return playerUser(row, column, board);
+            }else{
+                boardPrint(row, column, board, computerPoint, userPoint);
+                return playerComputer(row, column, board);
+            }
+        }else{
+            // set game over
+        }
+
 
         return board;
     }
