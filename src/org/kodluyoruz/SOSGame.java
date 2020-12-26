@@ -122,7 +122,6 @@ public class SOSGame {
     public boolean checkSOS(int row, int column, int rowLength, int columnLength, String [][]board, String character ) {
         if (character.equals("S")) {
             if (board[row][column - 1].equals("O") && board[row][column - 2].equals("S")) {
-                System.out.println("if Sos");
                 return true;
             } else if (column < columnLength - 1 && board[row][column + 1].equals("O")
                     && board[row][column + 2].equals("S")) {

@@ -23,5 +23,8 @@ public class Main {
             boardColumn = scanner.nextInt();
             if(boardColumn < 3 || boardColumn > 7) System.out.println("Please enter a valid number!");
         }while(boardColumn < 3 || boardColumn > 7);
+
+        SOSGame SOSGame = new SOSGame(userName, boardRow, boardColumn);
+        SOSGame.startGame();
     }
 }
