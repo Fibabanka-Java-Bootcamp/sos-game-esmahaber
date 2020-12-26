@@ -58,17 +58,15 @@ public class SOSGame {
 
             int randomRow, randomColumn;
             do {
-                System.out.println("do comp");
                 randomRow = (int)(1 + Math.random()*row);
                 randomColumn = (int)(1 + Math.random()*column);
             }while(isEmpty(randomRow, randomColumn, board));
 
             board[randomRow][randomColumn] = computerCharacter;
 
-            check = false;
+            check = checkSOS(randomRow, randomColumn, row, column, board, computerCharacter);
 
             if(check){
-                System.out.println("Computer check true");
                 computerPoint++;
                 boardPrint(row, column, board, computerPoint, userPoint);
                 return playerComputer(row, column, board);
@@ -80,6 +78,58 @@ public class SOSGame {
         }
 
         return board;
+    }
+
+    public boolean checkSOS(int row, int column, int rowLength, int columnLength, String [][]board, String character ) {
+        if (character.equals("S")) {
+            if (board[row][column - 1].equals("O") && board[row][column - 2].equals("S")) {
+                System.out.println("if Sos");
+                return true;
+            } else if (column < columnLength - 1 && board[row][column + 1].equals("O")
+                    && board[row][column + 2].equals("S")) {
+                return true;
+            } else if (board[row - 1][column].equals("O") && board[row - 2][column].equals("S")) {
+                return true;
+            } else if (row < rowLength - 1 && board[row + 1][column].equals("O")
+                    && board[row + 2][column].equals("S")) {
+                return true;
+            } else if (row < rowLength - 1 && column < columnLength - 1
+                    && board[row + 1][column + 1].equals("O") && board[row + 2][column + 2].equals("S") //çapraz sos
+            ) {
+                return true;
+            } else if (board[row - 1][column - 1].equals("O")
+                    && board[row - 2][column - 2].equals("S")
+            ) {
+                return true;
+            } else if (column < columnLength - 1 && board[row - 1][column + 1].equals("O")
+                    && board[row - 2][column + 2].equals("S")
+            ) {
+                return true;
+            }else if (row < rowLength - 1 && board[row + 1][column - 1].equals("O")
+                    && board[row + 2][column - 2].equals("S")) {
+                return true;
+            }
+            return false;
+        } else if (character.equals("O")) {
+            if (column <= columnLength - 1 && board[row][column - 1].equals("S")
+                    && board[row][column + 1].equals("S")) {
+                return true;
+            }else if (row <= rowLength - 1 && board[row - 1][column].equals("S")
+                    && board[row + 1][column].equals("S")
+            ) {
+                return true;
+            }else if (row <= rowLength - 1 && column <= columnLength - 1
+                    && board[row - 1][column - 1].equals("S") && board[row + 1][column + 1].equals("S")) {
+                return true;
+            }else if (row <= rowLength - 1 && column <= columnLength - 1
+                    && board[row + 1][column - 1].equals("S") && board[row - 2][column + 2].equals("S")) {
+                return true;
+            }
+
+            return false;
+
+        }
+        return false;
     }
 
     public boolean isEmpty(int row, int column, String [][]board )
