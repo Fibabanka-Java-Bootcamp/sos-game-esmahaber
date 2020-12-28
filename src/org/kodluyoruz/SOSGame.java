@@ -55,7 +55,6 @@ public class SOSGame {
         if(totalBox > 0){
             boolean check;
             totalBox--;
-            System.out.println(totalBox);
 
             int randomRow, randomColumn;
             do {
@@ -156,11 +155,11 @@ public class SOSGame {
                     && board[row + 1][column].equals("S")
             ) {
                 return true;
-            }else if (row <= rowLength - 1 && column <= columnLength - 1
+            }else if (row > 1 && column > 1 && column < columnLength && row < rowLength
                     && board[row - 1][column - 1].equals("S") && board[row + 1][column + 1].equals("S")) {
                 return true;
-            }else if (row <= rowLength - 1 && column <= columnLength - 1
-                    && board[row + 1][column - 1].equals("S") && board[row - 2][column + 2].equals("S")) {
+            }else if (row > 1 && column > 1 && column < columnLength && row < rowLength
+                    && board[row + 1][column - 1].equals("S") && board[row - 1][column + 1].equals("S")) {
                 return true;
             }
 

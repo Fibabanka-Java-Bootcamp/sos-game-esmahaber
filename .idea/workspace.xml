@@ -3,8 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="1003b710-e8bf-4adf-b9a8-76785358e12f" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/sos-game-esmahaber/org/kodluyoruz/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/sos-game-esmahaber/org/kodluyoruz/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/org/kodluyoruz/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/org/kodluyoruz/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/org/kodluyoruz/SOSGame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/org/kodluyoruz/SOSGame.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -33,6 +31,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -54,17 +53,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
-      <option name="arquillianRunConfiguration">
-        <value>
-          <option name="containerStateName" value="" />
-        </value>
-      </option>
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <recent_temporary>
       <list>
         <item itemvalue="Application.Main" />
@@ -79,7 +67,11 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1609019564817</updated>
-      <workItem from="1609019612797" duration="2324000" />
+      <workItem from="1609019612797" duration="2949000" />
+      <workItem from="1609058496024" duration="271000" />
+      <workItem from="1609059210639" duration="71000" />
+      <workItem from="1609176345785" duration="4000" />
+      <workItem from="1609181093068" duration="5957000" />
     </task>
     <servers />
   </component>
@@ -96,5 +88,6 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
 </project>
