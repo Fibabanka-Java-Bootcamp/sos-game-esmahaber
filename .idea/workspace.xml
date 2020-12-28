@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="1003b710-e8bf-4adf-b9a8-76785358e12f" name="Default Changelist" comment="">
+    <list default="true" id="1003b710-e8bf-4adf-b9a8-76785358e12f" name="Default Changelist" comment="checkSOS method bug fixed">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/org/kodluyoruz/SOSGame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/org/kodluyoruz/SOSGame.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/sos-game-esmahaber/org/kodluyoruz/SOSGame.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/sos-game-esmahaber/org/kodluyoruz/SOSGame.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -53,6 +53,17 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
         <item itemvalue="Application.Main" />
@@ -71,8 +82,16 @@
       <workItem from="1609058496024" duration="271000" />
       <workItem from="1609059210639" duration="71000" />
       <workItem from="1609176345785" duration="4000" />
-      <workItem from="1609181093068" duration="5957000" />
+      <workItem from="1609181093068" duration="6929000" />
     </task>
+    <task id="LOCAL-00001" summary="checkSOS method bug fixed">
+      <created>1609188696366</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1609188696381</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -89,5 +108,9 @@
       </map>
     </option>
     <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="checkSOS method bug fixed" />
+    <option name="LAST_COMMIT_MESSAGE" value="checkSOS method bug fixed" />
   </component>
 </project>
