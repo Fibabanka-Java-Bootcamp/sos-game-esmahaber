@@ -87,16 +87,21 @@ public class SOSGame {
             Scanner scanner = new Scanner(System.in);
             boolean check;
             int count = 0;
+            int isValid = 0;
             totalBox--;
             System.out.println(userName + ", it's your turn to play");
 
             do {
                 count++;
-                if(count > 1)  System.out.println("Please select an empty box:" );
-                System.out.println("Enter row and column number: (etc 4 4)" );
-                selectRow = scanner.nextInt();
-                selectColumn = scanner.nextInt();
-            }while(isEmpty(selectRow, selectColumn, board));
+                if(count > 1) System.out.println("Please select an empty box:" );
+                do {
+                    isValid++;
+                    if(isValid > 1) System.out.println("Please enter valid row and column value!");
+                    System.out.println("Enter row and column number: (etc 4 4)" );
+                    selectRow = scanner.nextInt();
+                    selectColumn = scanner.nextInt();
+                }while (selectRow > row || selectRow < 0 || selectColumn > column || selectColumn < 0);
+            }while(isEmpty(selectRow, selectColumn, board) );
 
             board[selectRow][selectColumn] = userCharacter;
 
